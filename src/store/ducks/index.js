@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
-import addBoxReducer from "./Box";
+import { addBoxReducer, boxReducer } from "./Box";
+import { addFileReducer } from "./File";
+
 export default combineReducers({
-  addBoxReducer
+  addBoxReducer,
+  boxReducer,
+  addFileReducer
 });

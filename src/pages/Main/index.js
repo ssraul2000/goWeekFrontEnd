@@ -13,8 +13,16 @@ class Main extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.newBoxTitle === "") {
+      return;
+    }
     this.props.addBoxCreator(this.state.newBoxTitle);
   };
+  componentDidUpdate() {
+    if (this.props.box.isLoaded == true) {
+      this.props.history.push(`/box/${this.props.box.data._id}`);
+    }
+  }
   handleTitleButton = () => {};
   render() {
     return (

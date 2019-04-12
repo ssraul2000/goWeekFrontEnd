@@ -32,3 +32,6 @@
 #main-container form button:hover {
   opacity: 0.8;
 }
+#main-container form input:focus {
+  border: 1px solid #7159c1;
+}
